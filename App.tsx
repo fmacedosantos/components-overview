@@ -7,7 +7,7 @@ export default function App() {
     <View style={styles.container}>
       
       {/* também é possível usar o require(caminho da imagem)*/}
-      <Image source={imgSuper}/> 
+      <Image style={styles.img} source={imgSuper}/> 
 
       <TextInput style={styles.input} 
       onChange={(evento) => {
@@ -49,6 +49,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  img: {
+    width: 60,
+    height: 60
   },
   input: {
     height: 40,
