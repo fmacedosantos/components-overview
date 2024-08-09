@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import imgSuper from './assets/super.png'
 import { useState } from 'react';
 
@@ -7,7 +7,8 @@ export default function App() {
   const [usuario, setUsuario] = useState('')
 
   return (
-    <View style={styles.container}>
+    <ScrollView>
+      <View style={styles.container}>
       
       {/* também é possível usar o require(caminho da imagem)*/}
       <Image style={styles.img} source={imgSuper}/> 
@@ -48,7 +49,8 @@ export default function App() {
         <Text>textos</Text>
       </Text>
       <StatusBar style="auto" />
-    </View>
+      </View>
+    </ScrollView>
   );
 }
 
@@ -60,8 +62,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   img: {
-    width: 60,
-    height: 60
+    width: 720,
+    height: 720
   },
   input: {
     height: 40,
