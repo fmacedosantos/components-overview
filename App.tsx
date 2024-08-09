@@ -10,8 +10,8 @@ export default function App() {
       <Image source={imgSuper}/> 
 
       <TextInput style={styles.input} 
-      onChange={() => {
-        console.log('Adicionando texto');
+      onChange={(evento) => {
+        console.log(evento.nativeEvent.text);
       }} keyboardType='numeric'
       placeholder='Digite um número'/>
 
