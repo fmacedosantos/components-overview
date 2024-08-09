@@ -1,9 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Alert, Image, StyleSheet, Text, View } from 'react-native';
+import imgSuper from './assets/super.png'
 
 export default function App() {
   return (
     <View style={styles.container}>
+      
+      {/* também é possível usar o require(caminho da imagem)*/}
+      <Image source={imgSuper}/> 
+
       <View
         onTouchStart={(evento) => {
           Alert.alert('TOQUE', 'Clique iniciado')
