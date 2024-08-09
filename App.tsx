@@ -1,14 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Image, ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
 import imgSuper from './assets/super.png'
 import { useState } from 'react';
 
 export default function App() {
   const [usuario, setUsuario] = useState('')
+  const [ligado, setLigado] = useState(true)
+
+  function handleSwitch(){
+    setLigado(!ligado)
+  }
 
   return (
     <ScrollView>
       <View style={styles.container}>
+
+        <Switch value={ligado}
+        onValueChange={handleSwitch}/>
       
       {/* também é possível usar o require(caminho da imagem)*/}
       <Image style={styles.img} source={imgSuper}/> 
