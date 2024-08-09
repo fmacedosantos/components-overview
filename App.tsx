@@ -19,7 +19,8 @@ export default function App() {
         onValueChange={handleSwitch}/>
       
       {/* também é possível usar o require(caminho da imagem)*/}
-      <Image style={styles.img} source={imgSuper}/> 
+      <Image style={{display: ligado ? 'flex' : 'none'}} 
+      source={imgSuper}/> 
 
       <TextInput style={styles.input} 
       onChange={(texto) => 
