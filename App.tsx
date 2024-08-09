@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import imgSuper from './assets/super.png'
+import { useState } from 'react';
 
 export default function App() {
+  const [usuario, setUsuario] = useState('')
+
   return (
     <View style={styles.container}>
       
@@ -10,10 +13,16 @@ export default function App() {
       <Image style={styles.img} source={imgSuper}/> 
 
       <TextInput style={styles.input} 
-      onChange={(evento) => {
-        console.log(evento.nativeEvent.text);
-      }} keyboardType='numeric'
-      placeholder='Digite um número'/>
+      onChange={(texto) => 
+        setUsuario(texto.nativeEvent.text)
+      } keyboardType='default'
+      placeholder='Nickname'
+      value={usuario}/>
+
+      <Button title='Exibir Nickname'
+      onPress={() => {
+        Alert.alert('NICKNAME', usuario)
+      }}/>
 
       <View
         onTouchStart={(evento) => {
