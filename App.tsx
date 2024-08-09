@@ -12,7 +12,7 @@ export default function App() {
           Alert.alert('TOQUE', 'Clique finalizado')
         }}
       >
-        <Text style={styles.button}>CLIQUE</Text>
+        <Text style={[styles.button, styles.border]}>CLIQUE</Text>
       </View>
 
       <Text selectable={true}>Agora você consegue selecionar o texto!</Text>
@@ -32,6 +32,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  border: {
+    borderColor: 'black',
+    borderWidth: 2
   },
   button: {
     backgroundColor: 'blue',
