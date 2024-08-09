@@ -12,7 +12,13 @@ export default function App() {
           Alert.alert('TOQUE', 'Clique finalizado')
         }}
       >
-        <Text style={[styles.button, styles.border]}>CLIQUE</Text>
+        <Text style={[styles.button, styles.border]}
+        onPress={() => {
+          console.log('Pressionado');
+        }} onLongPress={() => {
+          console.log('Pressionamento longo');
+        }}
+        >CLIQUE</Text>
       </View>
 
       <Text selectable={true}>Agora você consegue selecionar o texto!</Text>
