@@ -16,6 +16,11 @@ export default function App() {
       </View>
 
       <Text selectable={true}>Agora você consegue selecionar o texto!</Text>
+
+      <Text>
+        <Text>Concatenando </Text>
+        <Text>textos</Text>
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
