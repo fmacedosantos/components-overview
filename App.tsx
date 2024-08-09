@@ -14,7 +14,8 @@ export default function App() {
       >
         <Text>CLIQUE</Text>
       </View>
-      <Text>Open up App.tsx to start working on your app!</Text>
+
+      <Text selectable={true}>Agora você consegue selecionar o texto!</Text>
       <StatusBar style="auto" />
     </View>
   );
